@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container"> 
+  <% @flats.each do |flat| %>
+    <div class="col-4">
+      <div class="flat-card">
+        <div class="flat-card-content">
+          <h4><%= flat.name %></h4>h4>
+        </div>
+      </div>
+    </div>
+    
+    <%= flat.address %>
+    <%= flat.description %>
+    <%= flat.price_per_night %>
+    <%= flat.number_of_guests %>
+  <% end %>
+</div>
